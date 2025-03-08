@@ -7,8 +7,9 @@
 
 
 body {
-    background-image: url('C:/	https://github.com/TheBridge-FullStackDeveloper/FS…g_Page/blob/main/img/referencia-sk01.jpg?raw=trueUsChttps://github.com/TheBridge-FullStackDeveloper/FS_Online_Oct_Entregable_Landing_Page/blob/main/img/referencia-sk01.jpg?raw=true:\Users\flofu\OneDrive\Escritorio\BOOTCAMP\Sprint3\FS_Online_Oct_Entregable_Landing_Page\img\sk_fondo.jpgers/flofu/OneDrive/Escritorio/BOOTCAMP/Sprint3/FS_Online_Oct_Entregable_Landing_Page/img/sk_fondo.jpg');
+    background-image: url('./img/sk_fondo.jpg');
     background-size: cover;
+    
 }
 
 
@@ -109,11 +110,32 @@ section h1 {
     font-size: 14px;
     margin-top: 10px;
 }
+.carrousel.puntos {
+    width: 100%;
+    margin: 1em 0 0;
+    padding: .4em;
+    display: flex;
+    flex-flow: row nowrap ;
+    justify-content:center;
+    align-items: center;
+}
+.carrousel.punto {
+    width: 2em;
+    height: 2em;
+    margin: 1em 0 0 ;
+}
+.carrousel.punto.activo {
+    background-color: aliceblue;
+}
 .cosmetic {
     display: none;
  } 
 /*el menú de la barra de navegación debe convertirse en un menú desplegable u oculto.*/
 @media screen and (max-width: 480px) {
+    body .img {
+        width: auto;
+        height: fit-content;
+    }
     .menu {
         display: none; 
         flex-direction: column;
@@ -142,16 +164,102 @@ section h1 {
     .menu li {
         margin: 10px 0;
     }
+    section .cosmetic {
+        display: flex;
+        position:sticky;
+        width: auto;
+        height: 25%; 
+    }
 }
 
 /* pantalla sea mayor de 480px y menor de 768px, el menú tendrá que estar en el lateral */
 @media screen and (min-width: 480px) and (max-width: 768px) {
+    .menu {
+        flex-direction: column;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 250px;
+        height: 100vh; 
+        background-color: white;
+        box-shadow: 4px 0px 6px rgba(0, 0, 0, 0.1);
+        padding: 20px;
+        align-items: flex-start;
+    }
+
+    .menu li {
+        margin: 15px 0;
+    }
+
+    .menu a {
+        font-size: 16px;
+    }
+}
+
+.menu li {
+    margin: 0 15px;
+}
+
+.menu a {
+    text-decoration: none;
+    color: #2db1a6;
+    font-size: 14px;
+}
+
+.lang-selector button {
+    background: #ff6b6b;
+    color: white;
+    border: none;
+    padding: 8px 12px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+
+section {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    color: white;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+    text-align: left;
+}
+
+section p {
+    font-size: 14px;
+    margin-bottom: 10px;
+}
+
+section h1 {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+
+.cta, .club-btn {
+    background: #ff6b6b;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.club-btn {
+    display: block;
+    border-radius: 50px;
+    font-size: 14px;
+    margin-top: 10px;
 
 }
 
-/*ME FALTA LO DEL @MEDIA,
- QUE APAREZCA ABAJO LO COSMETICA COREANA .COSMETIC.
+/*EL MEDIA NO ME FUNCIONA DEL TODO
+EL NAV BAR TIENE QUE SER DESPLEGABLE EN CADA ELEMENTO
+QUE APAREZCA ABAJO LO COSMETICA COREANA .COSMETIC.
 EL ICONO DEL REGALITO, 
 EL ICONO DEL MENSAJE, 
-EL CARRUSEL, 
-LA IMAGEN DE FONDO,
+EL CARRUSEl no aparece donde quiero, 
+LA IMAGEN DE FONDO me aparece triplicada,
+NO SE VE LA BANDERITA DE ESPANIA, COMO GUARDO UNA IMAGEN?
