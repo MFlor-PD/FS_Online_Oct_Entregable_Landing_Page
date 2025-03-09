@@ -8,6 +8,7 @@
 
 body {
     background-image: url('./img/sk_fondo.jpg');
+    background-repeat: no-repeat;
     background-size: cover;
     
 }
@@ -110,23 +111,7 @@ section h1 {
     font-size: 14px;
     margin-top: 10px;
 }
-.carrousel.puntos {
-    width: 100%;
-    margin: 1em 0 0;
-    padding: .4em;
-    display: flex;
-    flex-flow: row nowrap ;
-    justify-content:center;
-    align-items: center;
-}
-.carrousel.punto {
-    width: 2em;
-    height: 2em;
-    margin: 1em 0 0 ;
-}
-.carrousel.punto.activo {
-    background-color: aliceblue;
-}
+
 .cosmetic {
     display: none;
  } 
@@ -213,6 +198,12 @@ section h1 {
     padding: 8px 12px;
     cursor: pointer;
     border-radius: 5px;
+}
+.lang-selector img {
+    width: 1em;;
+    height: 1em;
+    justify-content: space-between;
+    margin-right: .2em;
 }
 
 
